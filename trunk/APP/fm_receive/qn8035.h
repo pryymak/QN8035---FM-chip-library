@@ -8,13 +8,19 @@
 ** subversion number:   160      
 **----------------------------------------------------------------------------------------
 ************************************************************************************************/
+#include "config.h"
 #include "typedef.h"
 
 
 #ifndef _QN_0835_H
 #define _QN_0835_H
 
+#ifdef QN_SCAN_ST_ENABLE
+#define PILOT_CCA                       1  // 0: disable stereo judgement for the country has many mono FM stations
+#else
 #define PILOT_CCA                       0  // 0: disable stereo judgement for the country has many mono FM stations
+#endif
+
 #define CCA_PILOT_SNR_FILTER            35//25 
 
 #define UINT8 	u8 

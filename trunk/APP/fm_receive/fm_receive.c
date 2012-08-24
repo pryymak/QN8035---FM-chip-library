@@ -585,6 +585,9 @@ void fm_radio(void)
 #ifdef USE_AMP_MODE_SELECT
 	D_CLASS_AMP_GPIO_INIT(); 
 	D_CLASS_AMP_LOW();
+#elif defined(USE_AMP_MODE_SELECT_FOR_NS4160)
+	NS4160_AMP_GPIO_INIT();
+	AB_AMP_SEL();
 #endif
 //    printf("enter fm\n");
     enable_key_tone_flag(1);
@@ -637,6 +640,8 @@ void fm_radio(void)
     P05_source_select(P05_SEL_IO);
 #ifdef USE_AMP_MODE_SELECT
 	D_CLASS_AMP_HIGH();
+#elif defined(USE_AMP_MODE_SELECT_FOR_NS4160)
+	D_CLASS_AMP_SEL();
 #endif	
     break_encode();
 }
