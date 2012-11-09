@@ -401,6 +401,13 @@ void fm_rev( void )
 
         case MSG_FM_SCAN_ALL:								//play 长按自动全频搜索
 
+#ifdef FM_SCAN_ALL_PP_ONE_KEY
+	     if(RECODE_STOP != encode_status){
+	            put_msg_lifo(MSG_REC_PP);
+		     break;			
+	     }
+#endif		 
+
     	     flashled(LED_SPARK_FAST);
             key = fm_scan(0);	
 	     flashled(LED_ON);
@@ -554,7 +561,15 @@ void fm_rev( void )
                  //   cur_menu = MENU_RECWORKING;
 		   disp_port(MENU_RECWORKING); 
 					
-            }			
+            }		
+#ifdef DISP_REC_TIME_PAUSE
+	     if(RECODE_PAUSE== encode_status)
+            {
+                 //   cur_menu = MENU_RECWORKING;
+		   disp_port(MENU_REC_PAUSE); 
+					
+            }	
+#endif
             break;
 
 

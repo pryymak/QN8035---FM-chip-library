@@ -153,8 +153,11 @@ bool BK1080_ValidStop(u16 freq)//,u16 start_freq)
     u16 cur_freq_deviation;
 
     BK1080_SetFreq(freq);
+#if defined(K0000_BHT_C202_REC_V001)
+    delay_10ms(15);		//延时时间>=30ms
+#else	
     delay_10ms(7);		//延时时间>=30ms
-
+#endif
 ///////////////////////////////////////////////////////////////////
 //new added 2009-05-30
 
