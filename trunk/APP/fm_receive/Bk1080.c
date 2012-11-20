@@ -52,7 +52,7 @@ u16 _code HW_Reg[] =
     0x0008,
     0x0000,
     0x51E1,
-    0x38BC,
+    0x28DC,
     0x2645,
     0x00E4,
     0x1CD8,
@@ -202,6 +202,7 @@ bool BK1080_ValidStop(u16 freq)//,u16 start_freq)
     }
 
 ///////////////////////////////////////////////////////////////////////////
+#if 0
 //new added 2009-05-30
     if ( (freq>875)&&( (freq-last_tuned_freq)==1) )//start_freq)&&( (freq-last_tuned_freq)==1) )
     {
@@ -236,6 +237,7 @@ bool BK1080_ValidStop(u16 freq)//,u16 start_freq)
             return 0;
         }
     }
+#endif
 
     last_tuned_freq=freq;				//save last tuned freqency
     g_last_freq_deviation_value=cur_freq_deviation;
