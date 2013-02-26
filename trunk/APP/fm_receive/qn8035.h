@@ -39,9 +39,108 @@
 #define QND_DIGITAL_CLOCK               0x80    //inject digital clock,default is inject digital clock
 
 //crystal clock is 32768HZ
-#define QND_XTAL_DIV0                   0x01
-#define QND_XTAL_DIV1                   0x08
-#define QND_XTAL_DIV2                   0x5C
+//#define QND_XTAL_DIV0                   0x01
+//#define QND_XTAL_DIV1                   0x08
+//#define QND_XTAL_DIV2                   0x5C
+
+//crystal clock is 12MHZ
+#define QND_XTAL_DIV0                               0x6e
+#define QND_XTAL_DIV1                               0x01
+#define QND_XTAL_DIV2                               0x54
+
+/*
+//crystal clock is 32768HZ
+#define QND_XTAL_DIV0                               0x01
+#define QND_XTAL_DIV1                               0x08
+#define QND_XTAL_DIV2                               0x5c
+#define QND_XTAL_DIV1_855				0x88
+#define QND_XTAL_DIV2_855				0x3b
+
+//crystal clock is 4MHZ
+#define QND_XTAL_DIV0                               0x7a
+#define QND_XTAL_DIV1                               0x00
+#define QND_XTAL_DIV2                               0x54
+#define QND_XTAL_DIV1_855				0x88
+#define QND_XTAL_DIV2_855				0x33
+
+//crystal clock is 6MHZ
+#define QND_XTAL_DIV0                               0xb7
+#define QND_XTAL_DIV1                               0x00
+#define QND_XTAL_DIV2                               0x54
+#define QND_XTAL_DIV1_855				0x88
+#define QND_XTAL_DIV2_855				0x33
+
+//crystal clock is 7.3728MHZ
+#define QND_XTAL_DIV0                               0xe1
+#define QND_XTAL_DIV1                               0x08
+#define QND_XTAL_DIV2                               0x5c
+#define QND_XTAL_DIV1_855				0x88
+#define QND_XTAL_DIV2_855				0x3b
+
+//crystal clock is 8MHZ
+#define QND_XTAL_DIV0                               0xf4
+#define QND_XTAL_DIV1                               0x00
+#define QND_XTAL_DIV2                               0x54
+#define QND_XTAL_DIV1_855				0x88
+#define QND_XTAL_DIV2_855				0x33
+
+//crystal clock is 10MHZ
+#define QND_XTAL_DIV0                               0x31
+#define QND_XTAL_DIV1                               0x01
+#define QND_XTAL_DIV2                               0x54
+#define QND_XTAL_DIV1_855				0x89
+#define QND_XTAL_DIV2_855				0x33
+
+//crystal clock is 11.0592MHZ
+#define QND_XTAL_DIV0                               0x52
+#define QND_XTAL_DIV1                               0xa1
+#define QND_XTAL_DIV2                               0x70
+#define QND_XTAL_DIV1_855				0x19
+#define QND_XTAL_DIV2_855				0x50
+
+//crystal clock is 12MHZ
+#define QND_XTAL_DIV0                               0x6e
+#define QND_XTAL_DIV1                               0x01
+#define QND_XTAL_DIV2                               0x54
+#define QND_XTAL_DIV1_855				0x89
+#define QND_XTAL_DIV2_855				0x33
+
+//crystal clock is 16MHZ
+#define QND_XTAL_DIV0                               0xe8
+#define QND_XTAL_DIV1                               0x01
+#define QND_XTAL_DIV2                               0x54
+#define QND_XTAL_DIV1_855				0x89
+#define QND_XTAL_DIV2_855				0x33
+
+//crystal clock is 20MHZ
+#define QND_XTAL_DIV0                               0x62
+#define QND_XTAL_DIV1                               0x02
+#define QND_XTAL_DIV2                               0x54
+#define QND_XTAL_DIV1_855				0x8a
+#define QND_XTAL_DIV2_855				0x33
+
+//crystal clock is 24MHZ
+#define QND_XTAL_DIV0                               0xdc
+#define QND_XTAL_DIV1                               0x02
+#define QND_XTAL_DIV2                               0x54
+#define QND_XTAL_DIV1_855				0x8a
+#define QND_XTAL_DIV2_855				0x33
+
+//crystal clock is 26MHZ
+#define QND_XTAL_DIV0                               0x19
+#define QND_XTAL_DIV1                               0x03
+#define QND_XTAL_DIV2                               0x54
+#define QND_XTAL_DIV1_855				0x8b
+#define QND_XTAL_DIV2_855				0x33
+
+//crystal clock is 27MHZ
+#define QND_XTAL_DIV0                               0x38
+#define QND_XTAL_DIV1                               0x73
+#define QND_XTAL_DIV2                               0x5c
+#define QND_XTAL_DIV1_855				0xfb
+#define QND_XTAL_DIV2_855				0x3b
+*/
+
 
 //following is definition step
 #define QND_STEP_CONSTANT               0x40 //(QND_FSTEP_100KHZ << 6)

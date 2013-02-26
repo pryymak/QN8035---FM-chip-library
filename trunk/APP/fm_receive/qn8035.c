@@ -238,11 +238,11 @@ void init_QN8035(void)
 	/*********User sets chip working clock **********/
 	//Following is where change the input clock wave type,as sine-wave or square-wave.
 	//default set is 32.768KHZ square-wave input.
-	//QND_WriteReg(0x01,QND_SINE_WAVE_CLOCK);
+	QND_WriteReg(0x01,QND_SINE_WAVE_CLOCK);
 	//Following is where change the input clock frequency.
-	//QND_WriteReg(XTAL_DIV0, QND_XTAL_DIV0);
-	//QND_WriteReg(XTAL_DIV1, QND_XTAL_DIV1);
-	//QND_WriteReg(XTAL_DIV2, QND_XTAL_DIV2);
+	QND_WriteReg(XTAL_DIV0, QND_XTAL_DIV0);
+	QND_WriteReg(XTAL_DIV1, QND_XTAL_DIV1);
+	QND_WriteReg(XTAL_DIV2, QND_XTAL_DIV2);
 	/********User sets chip working clock end ********/
 
 	QND_WriteReg(0x54, 0x47);//mod PLL setting
