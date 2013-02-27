@@ -268,6 +268,7 @@ void BK1080_PowerDown(void)
 @Return:
 @Note: 	bool BK1080_Read_ID(void)
 ************************************************************/
+//extern void printf_u16(u16 dat,u8 c);
 bool BK1080_Read_ID(void)
 {
     u16 xdata bk_id;
@@ -275,6 +276,10 @@ bool BK1080_Read_ID(void)
     BEKEN_I2c_Read(0x01,temp,2); 	//read reg3,with 2 bytes
     ((u8 *)(&bk_id))[0] = temp[0];
     ((u8 *)(&bk_id))[1] = temp[1];
+
+	
+    //printf_u16(bk_id,'B');
+
     if (0x1080 == bk_id)
     {
         return TRUE;

@@ -448,12 +448,14 @@ void QND_SetVol(u8 vol)
 	QND_WriteReg(VOL_CTL,regVal);
 }
 
-
+//extern void printf_u16(u16 dat,u8 c);
 bool QN8035_Read_ID(void)
 {
 	u8  xdata cChipID;
 	cChipID = QND_ReadReg(CID2);
     cChipID &= 0xfc;
+
+    //printf_u16(cChipID,'Q');
 
     if (0x84 == cChipID )
 	    return 1;

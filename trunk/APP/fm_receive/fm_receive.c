@@ -623,6 +623,8 @@ void fm_radio(void)
     {
 #ifdef NO_FM_CHIP_GOTO_MP3
         work_mode = IDLE_MODE;
+#elif defined(NOT_USE_LINE_IN_FUNC)
+        work_mode = IDLE_MODE;
 #else
         work_mode++;
 #endif
